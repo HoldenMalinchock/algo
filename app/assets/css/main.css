@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes square-pop {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.square-pop {
+  animation: square-pop 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes path-pop {
+  0% {
+    transform: scale(0.4);
+    box-shadow: 0 0 0 0 rgb(16 185 129 / 0.6);
+  }
+  60% {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 6px rgb(16 185 129 / 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgb(16 185 129 / 0);
+  }
+}
+
+.path-pop {
+  animation: path-pop 320ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
